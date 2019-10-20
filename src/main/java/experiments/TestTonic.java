@@ -25,24 +25,32 @@ public class TestTonic {
     } catch (FileNotFoundException noFile) {
       System.exit(0);
     }
+    // Initialize variables
     boolean works;
     int totalWorks = 0;
     int totalFails = 0;
     int count = 0;
+    // Set up while loop to use Scanner iterator
     while (input.hasNext()) {
+      // Populate boolean to evaluate input result
       works = input.nextBoolean();
+      // Branching logic to keep track of various results
       if (works) {
         totalWorks++;
       } else {
         totalFails++;
       }
+      // Create a "progress" report every 10 iterations
       if ((count + 1) % 10 == 0) {
         progress(totalWorks, count + 1);
       }
+      // Keep track of iterations
       count++;
     }
+    // Create Fraction (rational number) object(s)
     Fraction working = new Fraction(totalWorks, count);
     Fraction failing = new Fraction(totalFails, count);
+    // Print final report
     System.out.println();
     System.out.println("Worked in " + working + " cases (" 
                        + working.fmtPercent() + ")");
@@ -56,6 +64,7 @@ public class TestTonic {
    * @param count Number of times the tonic has been tried
    */
   public static void progress(int works, int count) {
+    // Create progress report
     System.out.print(count + " tests:\t");
     System.out.print(works + " successes\t");
     System.out.println((count - works) + " failures");

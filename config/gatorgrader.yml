@@ -17,6 +17,7 @@ src/main:
             MatchFileFragment --fragment "++" --count 2
             MatchFileFragment --fragment "% 10 ==" --count 1
             MatchFileFragment --fragment "progress(" --count 1
+            MatchFileFragment --fragment "public static void progress" --count 1 --exact
             MatchFileRegex --regex "(if\s\()|(\?)" --count 2
             
 src/main:

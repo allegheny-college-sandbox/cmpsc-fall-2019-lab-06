@@ -66,6 +66,9 @@ The grading criteria below are written to accomodate a wide variety of solutions
 * Hint: implement this operator to display the results after every 10 tests
 - [ ] Uses 1 `if` statement (either using bracket format or `?` (`ternary`) -- operator)
 - [ ] Successfully implements a version of the `progress` method in the `while` loop
+* The `progress` method should:
+    * Have the correct `return` type
+    * Print a one-line "progress report" in the form of: `## Test:  ## successes  ## failures` (see below)
 - [ ] Uses at least one instance of a `Fraction` object
 - [ ] Produces output exactly like the following example:
 
