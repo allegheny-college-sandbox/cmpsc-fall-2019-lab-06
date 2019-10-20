@@ -32,9 +32,7 @@ As for a markdown cheatsheet, [this GitHub repository](https://github.com/adam-p
 
 ## Potion Commotion
 
-<center>
-<img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffc09.deviantart.net%2Ffs71%2Ff%2F2013%2F187%2Ff%2F1%2F8_bit_potion_by_captaintoog-d6cc1f1.png&f=1&nofb=1">
-</center>
+![Potion Commotion](https://www.cs.allegheny.edu/sites/dluman/cmpsc100/img/lab-06-potion.png)
 
 G. Wiz loves his position as an adjunct at the wizard college. But, lately, his penchant for the best in wizard finery (i.e. hats) has started to overwhelm the pay he's been drawing from the job! As such, he's decided to diversify the offerings of his private wizard practice by specializing in a new line of tonics he recently read about in _Gator Wizards Quarterly_: one that promises to give thumbs to any gator who imbibes the mixture.
 
