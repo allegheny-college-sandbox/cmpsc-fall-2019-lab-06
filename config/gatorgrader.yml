@@ -1,0 +1,43 @@
+---
+name: lab-06
+break: true
+indent: 4
+---
+src/main:
+    java:
+        experiments/TestTonic.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
+            MatchFileFragment --fragment "while (" --count 1 --exact
+            MatchFileFragment --fragment ".hasNext()" --count 1 --exact
+            MatchFileFragment --fragment ".nextBoolean()" --count 1 --exact
+            MatchFileFragment --fragment "new Fraction" --count 1
+            MatchFileFragment --fragment "boolean" --count 1
+            MatchFileFragment --fragment "++" --count 2
+            MatchFileFragment --fragment "% 10 ==" --count 1
+            MatchFileFragment --fragment "progress(" --count 1
+            MatchFileRegex --regex "(if\s\()|(\?)" --count 2
+            
+src/main:
+    java:
+        experiments/Fraction.java:
+            ConfirmFileExists
+            
+writing:
+    reflection.md:
+        ConfirmFileExists
+        CountFileWords --count 500
+        MatchFileFragment --fragment "TODO" --count 0 --exact
+        MatchFileFragment --fragment "Lorem ipsum..." --count 0 --exact
+        CountMarkdownTags --tag "heading" --count 8
+        CountMarkdownTags --tag "code_block" --count 1
+        CountMarkdownTags --tag "list" --count 1
+
+ExecuteCommand --command "gradle build"
+MatchCommandRegex --command "gradle run" --regex "[1-9]{1}[0]{1,}\stests" --count 20 --exact
+MatchCommandRegex --command "gradle run" --regex "successes(.*)failures" --count 20 --exact
+MatchCommandFragment --command "gradle run" --fragment "48.5%" --count 1 --exact
+MatchCommandFragment --command "gradle run" --fragment "51.5%" --count 1 --exact
+MatchCommandFragment --command "gradle run" --fragment "97/200" --count 1 --exact
+MatchCommandFragment --command "gradle run" --fragment "103/200" --count 1 --exact
