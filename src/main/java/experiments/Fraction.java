@@ -2,7 +2,7 @@ package experiments;
 
 import java.text.NumberFormat;
 
-/** Manages creation of Fraction objects (rational numbers)
+/** Manages creation of Fraction objects (rational numbers).
  *
  * @author Douglas Luman
  */  

@@ -36,7 +36,7 @@ writing:
 
 ExecuteCommand --command "gradle build"
 MatchCommandRegex --command "gradle run" --regex "[1-9]{1}[0]{1,}\stests" --count 20 --exact
-MatchCommandRegex --command "gradle run" --regex "successes(.*)failures" --count 20 --exact
+CountCommandOutput --command "gradle -q --console plain run" --count 22
 MatchCommandFragment --command "gradle run" --fragment "48.5%" --count 1 --exact
 MatchCommandFragment --command "gradle run" --fragment "51.5%" --count 1 --exact
 MatchCommandFragment --command "gradle run" --fragment "97/200" --count 1 --exact
