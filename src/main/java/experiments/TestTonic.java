@@ -27,9 +27,9 @@ public class TestTonic {
     }
     // Initialize variables
     boolean works;
+    int count = 0;
     int totalWorks = 0;
     int totalFails = 0;
-    int count = 0;
     // Set up while loop to use Scanner iterator
     while (input.hasNext()) {
       // Populate boolean to evaluate input result

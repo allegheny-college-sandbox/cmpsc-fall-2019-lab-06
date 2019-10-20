@@ -30,10 +30,8 @@ writing:
         ConfirmFileExists
         CountFileWords --count 500
         MatchFileFragment --fragment "TODO" --count 0 --exact
-        MatchFileFragment --fragment "Lorem ipsum..." --count 0 --exact
         CountMarkdownTags --tag "heading" --count 8
-        CountMarkdownTags --tag "code_block" --count 1
-        CountMarkdownTags --tag "list" --count 1
+        CountMarkdownTags --tag "code_block" --count 2
 
 ExecuteCommand --command "gradle build"
 MatchCommandRegex --command "gradle run" --regex "[1-9]{1}[0]{1,}\stests" --count 20 --exact
